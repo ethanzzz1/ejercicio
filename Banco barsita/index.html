@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajero</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+           body {
+          background-color: #f0f0f0;
+        }
+        footer {
+           position: fixed;
+           left: 0;
+           bottom: 0;
+           width: 100%;
+           background-color: #000;
+           color:#fff;
+           text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;"> Banco Barsita <span
+        class="badge bg-secondary"></span></h1>
+    <img src="https://i.pinimg.com/236x/e7/85/56/e785565254cd511f5775b7ad675e3d07--los.jpg" class="rounded mx-auto d-block" alt="...">
+    <div class="container mt-5">
+        <form>
+
+            <div class="row g-3">
+                <label for="nombreUsuario">Nombre de Usuario:</label>
+                <input type="text" class="form-control" placeholder="Ingrese su nombre"  id="nombreUsuario" required >
+            </div>
+            <div class="row g-3">
+                <label for="cantidadRetiro">Cantidad a Retirar ($):</label>
+                <input type="number" class="form-control" placeholder="$00000"  id="cantidadRetiro" required>
+            </div>
+        </form>
+        
+    </div>
+    <div class="container" id="sobre-nosotros">
+        <div class="row">
+          <div class="col-md-12 text-center">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-8 offset-md-2"
+            style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; text-align: center;">
+            <button type="button" class="btn btn-primary" onclick="calcularBilletes()">Realizar Retiro</button>
+
+        <div id="resultado">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-success" id="billetes100">
+                            Billetes de $100 : 
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="alert alert-success" id="billetes50">
+                            Billetes de $50 :
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="alert alert-success" id="billetes20">
+                            Billetes de $20 :
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="alert alert-success" id="billetes10">
+                            Billetes de $10 :
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="alert alert-success" id="billetes5">
+                            Billetes de $5 :
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="alert alert-success" id="billetes1">
+                            Billetes de $1 :
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+          
+          </div>
+        </div>
+      </div>
+
+     
+    <script src="calcu.js"></script>
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; Septiembre del 2023</p>
+        <p>Ethan y Angel</p>
+      </footer>
+</body>
+</html>
